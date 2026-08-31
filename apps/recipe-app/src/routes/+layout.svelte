@@ -1,0 +1,2 @@
+<script lang="ts">import'../app.css';import{onMount}from'svelte';import{registerStencil}from'$lib/stencil';onMount(registerStencil)</script>
+<svelte:head><title>Recipe Planner</title></svelte:head><header><a class="brand" href="/">Recipe Planner</a><nav aria-label="Main navigation"><a href="/recipes">Discover</a><a href="/favorites">Favorites</a><a href="/my-recipes">My recipes</a><a href="/meal-plan">Meal plan</a></nav></header><main><slot></slot></main><footer>Built with Svelte 5, SvelteKit and StencilJS.</footer>
