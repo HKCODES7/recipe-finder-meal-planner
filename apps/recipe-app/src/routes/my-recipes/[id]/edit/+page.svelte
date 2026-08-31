@@ -1,1 +1,0 @@
-<script lang="ts">import{page}from'$app/state';import RecipeForm from'$lib/RecipeForm.svelte';import{appState}from'$lib/storage.svelte';let recipe=$derived(appState.customRecipes.find(r=>r.id===page.params.id));</script><h1>Edit recipe</h1>{#if recipe}<RecipeForm existing={recipe}/>{:else}<p class="status">Recipe not found. <a href="/my-recipes">Return to my recipes</a>.</p>{/if}

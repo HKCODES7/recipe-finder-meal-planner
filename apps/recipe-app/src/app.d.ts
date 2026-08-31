@@ -1,1 +1,0 @@
-declare global { namespace App {} namespace svelteHTML { interface IntrinsicElements { 'recipe-card': any; 'recipe-search': any; 'meal-day': any; 'app-modal': any; } } } export {};
