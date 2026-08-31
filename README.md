@@ -250,8 +250,6 @@ build/
 *.tgz
 ```
 
-npm access tokens and other credentials must never be committed to the repository.
-
-## Author
+# Author
 
 Hitain Kakkar
