@@ -1,0 +1,12 @@
+{
+  "name": "recipe-finder-platform",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "npm run build:ui && npm run dev -w apps/recipe-app",
+    "build": "npm run build:ui && npm run build -w apps/recipe-app",
+    "build:ui": "npm run build -w packages/recipe-ui",
+    "check": "npm run test -w packages/recipe-ui && npm run check -w apps/recipe-app"
+  },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,1 @@
+<script lang="ts">import RecipeCard from'$lib/RecipeCard.svelte';import{appState}from'$lib/storage.svelte';</script><h1>Favorites</h1>{#if appState.favorites.length}<div class="grid">{#each appState.favorites as recipe(recipe.id)}<RecipeCard {recipe}/>{/each}</div>{:else}<p class="status">No favorites yet. <a href="/recipes">Discover recipes</a>.</p>{/if}

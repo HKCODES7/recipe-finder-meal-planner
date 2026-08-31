@@ -1,0 +1,1 @@
+<script>import RecipeForm from'$lib/RecipeForm.svelte';</script><h1>Create recipe</h1><RecipeForm/>

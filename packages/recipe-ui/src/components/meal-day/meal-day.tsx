@@ -1,0 +1,3 @@
+import {Component,Prop,Event,EventEmitter,h} from '@stencil/core';
+@Component({tag:'meal-day',styleUrl:'meal-day.css',shadow:true})
+export class MealDay{@Prop() day!:string;@Prop() recipeTitle='';@Prop() imageUrl='';@Event() chooseMeal!:EventEmitter<{day:string}>;@Event() removeMeal!:EventEmitter<{day:string}>;render(){return <section><h3>{this.day}</h3>{this.recipeTitle?<div>{this.imageUrl&&<img src={this.imageUrl} alt=""/>}<strong>{this.recipeTitle}</strong><div><button onClick={()=>this.chooseMeal.emit({day:this.day})}>Change</button><button onClick={()=>this.removeMeal.emit({day:this.day})}>Remove</button></div></div>:<button class="add" onClick={()=>this.chooseMeal.emit({day:this.day})}>+ Choose recipe</button>}</section>}}
