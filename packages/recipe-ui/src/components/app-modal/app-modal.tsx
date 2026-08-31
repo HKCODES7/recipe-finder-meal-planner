@@ -1,0 +1,3 @@
+import {Component,Prop,Event,EventEmitter,h,Host} from '@stencil/core';
+@Component({tag:'app-modal',styleUrl:'app-modal.css',shadow:true})
+export class AppModal{@Prop() open=false;@Event() modalClosed!:EventEmitter<void>;render(){return <Host>{this.open&&<div class="backdrop" onClick={()=>this.modalClosed.emit()}><section role="dialog" aria-modal="true" onClick={e=>e.stopPropagation()}><header><slot name="header"></slot><button aria-label="Close" onClick={()=>this.modalClosed.emit()}>×</button></header><main><slot></slot></main><footer><slot name="footer"></slot></footer></section></div>}</Host>}}
